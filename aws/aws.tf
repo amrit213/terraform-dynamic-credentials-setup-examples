@@ -66,7 +66,9 @@ resource "aws_iam_policy" "tfc_policy" {
    {
      "Effect": "Allow",
      "Action": [
-       "s3:ListBucket"
+       "s3:ListBucket",
+       "iam:GetRole",
+			 "ec2:DescribeAvailabilityZones"
      ],
      "Resource": "*"
    }
